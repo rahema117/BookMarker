@@ -1,0 +1,50 @@
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 60px;
+    color:#283959;
+    position: relative;
+    width: fit-content;
+}
+h1::before{
+    position: absolute;
+    content: " ";
+    background-color:#beebf5;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    bottom: 10px;
+    left: 0;
+   transition: all 0.5s;
+}
+h1:hover::before{
+   height: 60%;
+   
+}
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    background: /* Gradient in Hex */
+    linear-gradient(to right, #DD73DC 0%, 18.35443079471588%, #0A2D7F 36.70886158943176%, 68.35443079471588%, #EBC5DD 100%);
+    color: transparent;
+    background-clip: text;
+    
+}
+.color{
+    color:#283959;
+}
+dialog {
+    padding: 20px;
+    width: fit-content;
+    border:none;
+}
+
+dialog h3 {
+    font-size: 18px;
+    color: red;
+}
+
+dialog ul {
+    list-style-type:circle ;
+}

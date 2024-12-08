@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="shortcut icon" href="pngtree-bookmark-icon-vector-illustration-in-filled-style-for-any-purpose-png-image_975418.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+    <main>
+    <div class="container">
+        <h1 class="text-center m-auto my-5">Bookmarker</h1>
+        <div class="bookmark-body w-100 bg-white my-5 rounded-5 p-4 shadow">
+            <h2 class="text-center py-3 "><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+            <div class="mb-4">
+                <label for="bookmarkName" class="form-label color"><i class="fa-solid fa-book-bookmark me-1"></i>Site Name</label>
+                <input type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+              </div>
+            <div class="mb-4">
+                <label for="siteUrl" class="form-label color"><i class="fa-solid fa-link me-1"></i>Site URL</label>
+                <input type="url" class="form-control" id="siteUrl" placeholder="Website URL">
+              </div>
+              <button class=" submit d-block m-auto btn btn-outline-info btn-lg" onclick="addBookmark()" id="submitBtn">Submit</button>
+              <button class=" submit d-none m-auto btn btn-outline-warning btn-lg" onclick="updateBookmark()" id="updateBtn">Update</button>
+
+        </div>
+        <table class="table my-5 text-center">
+            <thead class="table-info">
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">website name</th>
+                <th class="text-capitalize">visit</th>
+                <th class="text-capitalize">update</th>
+                <th class="text-capitalize">Delete</th>
+            </thead>
+            <tbody id="demo">
+                
+            </tbody>
+        </table>
+        <dialog id="urlDialog" class="rounded-3 shadow ">
+            <h3>Invalid URL format!</h3>
+            <p>Please make sure the URL follows these rules:</p>
+            <ul>
+                <li class="my-1"> The URL must start with <strong>http://</strong> or <strong>https://</strong>.</li>
+                <li class="my-1"> The URL should not have any spaces.</li>
+                <li class="my-1">The URL must contain a valid domain name.</li>
+            </ul>
+            <button onclick="closeDialog()" class="btn btn-outline-info d-block m-auto">Close</button>
+        </dialog>
+
+
+
+    </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <script src="js/bootstrap.bundle.js"></script> 
+   <script src="js/main.js"></script>
+</body>
+</html>
